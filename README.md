@@ -97,8 +97,4 @@ Response0: We launch a localised (to whitehall's co-ordinates and the immediate 
 
 Stimulus1: We receive photos and verification of the fact that the kettle is on
 
-<<<<<<< HEAD
 Response1: We can then faithfully tweet out a report that the kettle is indeed happening.
-=======
-Response1: We can then faithfully tweet out a report that the kettle is indeed happening.
->>>>>>> 825b47c6c0e5c7c220c352c3e1774dfe8bb156c2
