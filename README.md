@@ -2,13 +2,21 @@ Webapp
 ======
 
 __author__ = "Samuel Carlisle"
+
 __copyright__ = "Copyright 2012"
+
 __credits__ = ["Samuel Carlisle, Martin Clarke, Alan Ross"]
+
 __license__ = "GPL Affero"
+
 __version__ = "3"
+
 __maintainer__ = "Samuel Carlisle"
+
 __email__ = "samuelcarlisle@gmail.com"
+
 __status__ = "Prototype"
+
 <pre>
                                                        ____
            ___                                      .-~. /_"-._        ________________________________
@@ -37,25 +45,36 @@ This README.md file is part of Sukey.io.
 Howto Sukey Community
 =====================
 *Follow us on twitter @sukeyio say hey with #sukey
+
 *Say hi over at sukey.org@gmail.com so we know you are interested in developing Sukey and then we can say hi back.
+
 *Join us on #sukey on irc.freenode.net and lurk with us. :)
+
 *Submit pull requests on Github and add new python scripts and ideas: https://github.com/sukey/webapp
+
 *Submit issues on the issue tracker: https://github.com/sukey/webapp/issues
 
 Howto Frontend
 ==============
 *Install XMPP or Apache or ...
+
 *Symlink or copy the 'Frontend' folder over to the Apache web directory for Testing in the browser on http://127.0.0.1/Frontend (linux /var/www) or (windows /www/htdocs)
 
 Howto Backend
 =============
 *Install Python 2.7.3
+
 *Signup as a developer over at http://human.io/
+
 *Do their HelloWorld Tutorial: http://human.io/docs/tutorial1
+
 *Download their python SDK: http://human.io/static/humanio-python-api.tgz
+
 *Download and play with some of their other examples: https://groups.google.com/forum/#!topic/humanio-discuss/FWHzvWTUuus
+
 *You can get in touch with the human.io developers here: https://groups.google.com/forum/?fromgroups#!forum/humanio-discuss
-*run Sukey backend scripts. e.g. python shameonyou.py (I often use a screen session in linux terminal to minimse the number of open terminal windows)
+
+*Run Sukey backend scripts. e.g. python shameonyou.py (I often use a screen session in linux terminal to minimse the number of open terminal windows)
 
 
 Description
@@ -69,9 +88,13 @@ How people can help from other countries
 Introduction / Theory
 =====================
 Sukey.io, in concept, is a sequence of Stimulus:Response mappings which have been devised in order to help demonstrators collaborate effectively during a demonstration.
-Example:
-Stimulus0: We find a tweet online which says "there is a kettle forming on Whitehall, OMG, get out of there!"
-Response0: We launch a localised (to whitehall's co-ordinates and the immediate locality) micro questionnaire which simply asks: "Is there a Kettle here?" and can you take a photo of it?
-Stimulus1: We receive photos and verification of the fact that the kettle is on
-Response1: We can then faithfully tweet out a report that the kettle is indeed happening.
 
+Example:
+
+Stimulus0: We find a tweet online which says "there is a kettle forming on Whitehall, OMG, get out of there!"
+
+Response0: We launch a localised (to whitehall's co-ordinates and the immediate locality) micro questionnaire which simply asks: "Is there a Kettle here?" and can you take a photo of it?
+
+Stimulus1: We receive photos and verification of the fact that the kettle is on
+
+Response1: We can then faithfully tweet out a report that the kettle is indeed happening.
