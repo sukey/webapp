@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+		<title>Sukey.io: Activate Micro-Taskssukey</title>
+		<link rel="stylesheet" href="../css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script type="text/javascript" src="../js/jquery-1.4.4.js"></script>
+		<script type="text/javascript" src="../js/ticker-1.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				getTickerRSS();
+			});
+		</script>
+</head>
+
+
+<body id="stage" class="theme">
+	<div id="container" align="left">
+		<div id="ticker"></div>
+	</div>
+	<div id="sukey" onclick="location.href='http://sukey.org/io/webapp/';"></div>
+	<div id="microtasks">
+	<p>Please note down this unique 5 digit id:</p>
+	<div align="center"><p>
+	<!--#include virtual="id.cgi"-->
+	</p>
+	</div>
+	<p>Then enter it here in the "123 Go To" tab:</p>
+	<div id="menu" align="center">
+	<a href="#" class="btn large" onclick="location.href='http://sukey.org/io/webapp/report';">Send us Info</a>
+	</div>
+	<p>A list of ways to send us info should then appear in the "New" tab.</p>
+	<div id="menu" align="center">
+	<a href="#" class="btn large" onclick="location.href='http://sukey.org/io/webapp/feedback';">Not Working? Feedback.</a>
+	</div>
+	<div align="center">
+		<p><a href="https://twitter.com/sukeyio" target="_blank">@sukeyio</a> | <a href="http://sukey.io/webapp/" target="_blank">Sukey.io</a> | <a href="http://sukey.org/" target="_blank">Sukey</a> &#169;&#824; 2012</p>
+	</div>
+</body> 
+</html>
