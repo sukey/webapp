@@ -22,7 +22,7 @@ a{
 }
 
 #sukey{
-  background:url(../images/logo.png) #000;
+  background-image:url(../images/logo.png);
   position: absolute;
   top: 0px;
   right: 0px;
