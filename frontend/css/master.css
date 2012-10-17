@@ -1,144 +1,162 @@
 body {
-/*background:#222 none repeat scroll 0 0;*/
-background-image:url(../images/bg.png);
-background-repeat:repeat;
-font-family:Helvetica;
-color: #FFFFFF;
-/*font-size:72%;
-line-height:1.5em;*/
-margin:0;
+  background: #000;
+  background-repeat:repeat;
+  font-family:Helvetica;
+  color: #fff;
+  /*font-size:72%;
+  line-height:1.5em;*/
+  margin:0;
+  padding-top:3px;
 }
 
 a{
-color: #FFFFFF;
+  color: #fff;
 }
 
 #menu{
-padding: 10px 0 0 0;
+  padding: 10px 0 0 0;
 }
 
 #wrapper{
-height: 100%;
+  height: 100%;
 }
 
 #sukey{
-background-image:url(../images/logo.png);
-position: absolute;
-top: 0px;
-right: 0px;
-width: 90px;
-height: 96px;
+  background-image:url(../images/logo.png);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 90px;
+  height: 96px;
 }
 
 #sukey:hover {
-cursor: pointer;
+  cursor: pointer;
 } 
 
 #container{
-background-image:url(../images/middle.png);
-background-repeat:repeat-x;
-/*height: 20%;*/
-margin-top:1px;
-padding:5px 0 0 0;
-width: 100%;
-height:78px;
+  background-image:url(../images/middle.png);
+  background-repeat:repeat-x;
+  /*height: 20%;*/
+  margin-top:1px;
+  margin-bottom:10px;
+  padding:5px 0 0 0;
+  width: 100%;
+  height:78px;
 }
 
 #map{
-position: absolute;
-top: 100px;
-right: 0px;
-width: 100%;
-height: 80%;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 100%;
+  height: 80%;
 }
 
 #ticker{
-font-size:72%;
-height:78px;
-width:200px;
-color: #000000;
-/*white-space: nowrap;*/
-overflow: hidden;
-text-overflow: ellipsis;
+  font-size:72%;
+  height:78px;
+  width:200px;
+  color: #000000;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #info > h4{
-font-size:.95em;
-margin:5px 0;
-}
-
-#stage.theme{
-padding-top:3px;
+  font-size:.95em;
+  margin:5px 0;
 }
 
 /* Definition List */
-#stage.theme > dl{
-padding-top:10px;
-clear:both;
-margin:0;
-list-style-type:none;
-padding-left:10px;
-overflow:auto;
+dl{
+  padding-top:10px;
+  clear:both;
+  margin:0;
+  list-style-type:none;
+  padding-left:10px;
+  overflow:auto;
 }
 
-#stage.theme > dl > dt{
+dl > dt{
 font-weight:bold;
 float:left;
 margin-left:5px;
 }
 
-#stage.theme > dl > dd{
+dl > dd{
 width:45px;
 float:left;
-color:#FFFFFF;
+color:#fff;
 font-weight:bold;
 }
 
 /* Content Styling */
-#stage.theme > h1, #stage.theme > h2, #stage.theme > p{
-margin:1em 0 .5em 13px;
+h1, h2, p{
+  margin:1em 0 .5em 13px;
 }
 
-#stage.theme > h1{
-color:#FFFFFF;
-font-size:1.6em;
-text-align:center;
-margin:0;
-margin-top:15px;
-padding:0;
+h1{
+  color:#fff;
+  font-size:1.6em;
+  text-align:center;
+  margin:0;
+  margin-top:15px;
+  padding:0;
 }
 
-#stage.theme > h2{
-clear:both;
-margin:0;
-padding:3px;
-font-size:1em;
-text-align:center;
+h2{
+  clear:both;
+  margin:0;
+  padding:3px;
+  font-size:1em;
+  text-align:center;
 }
 
-/* Stage Buttons */
-#stage.theme a.btn{
-border: 1px solid #555;
--webkit-border-radius: 5px;
-border-radius: 5px;
-text-align:center;
-display:block;
-float:clear;
-background:#444;
-width:150px;
-color:#9ab;
-font-size:1.1em;
-text-decoration:none;
-padding:1.2em 0;
-margin:3px 0px 3px 5px;
+/* menu */
+
+.nav{
+  width:96%;
+  margin: 0 auto;
+  list-style: none;
+  text-indent: 0;
+  padding: 0;
 }
-#stage.theme a.btn.large{
-width:96%;
-padding:1.2em 0;
+.nav li{
+  list-style: none;
+  text-indent: 0; 
+  margin: 0;
+}
+.nav li a{
+  border-top: 1px solid #a5ffa6;
+  border-bottom: 1px solid #006837;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align:center;
+  display:block;
+  background: #3db54b;
+  width:150px;
+  color:#000;
+  font-size:1.1em;
+  text-decoration:none;
+  padding:1.2em 0;
+  margin:3px 0px;
+  width: 100%;
+  text-shadow: 0 1px 1px #a5ffa6;
+  font-weight: bold;
+}
+.nav li a:hover,
+.nav li a:active,
+.nav li a:focus{
+  border-top: 1px solid #006837;
+  border-bottom: 1px solid #a5ffa6;
+  text-shadow: 0 -1px 1px #a5ffa6;
 }
 
-#credits{
-width:300px;
-text-align:left;
+
+footer{
+  width:96%;
+  margin: 0 auto;
 }
 
