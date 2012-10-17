@@ -9,6 +9,7 @@ __version__ = "3"
 __maintainer__ = "Samuel Carlisle"
 __email__ = "samuelcarlisle@gmail.com"
 __status__ = "Prototype"
+<pre>
                                                        ____
            ___                                      .-~. /_"-._        ________________________________
           `-._~-.                                  / /_ "~o\  :Y      /We made Sukey.io so that people \
@@ -30,6 +31,7 @@ __status__ = "Prototype"
                                 `. ~(
                                   )  \
                                  /,`--'~\--'
+</pre>
 This README.md file is part of Sukey.io.
 
 Howto Sukey Community
