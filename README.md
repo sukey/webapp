@@ -22,7 +22,7 @@ __status__ = "Prototype"
        ___                                      .-~. /_"-._        ________________________________
       `-._~-.                                  / /_ "~o\  :Y      /We made Sukey.io so that people \
           \  \                                / : \~x.  ` ')      |can have fun during the protests|
-           ]  Y                              /  |  Y< ~-.__j      |and, on the way, keep each other|
+           ]  Y                              /  |  Y<   .__j      |and, on the way, keep each other|
           /   !                        _.--~T : l  l<  /.-~      < safe, mobile and informed (;..;)|
          /   /                 ____.--~ .   ` l /~\ \<|Y          \________________________________/
         /   /             .-~~"        /| .    ',-~\ \L|
