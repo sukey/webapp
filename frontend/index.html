@@ -1,37 +1,82 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<meta http-equiv="content-script-type" content="text/javascript">
-	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" charset="utf-8">
-	<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
-	<script type="text/javascript" src="js/ticker-1.2.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			getTickerRSS();
-		});
-	</script>
-	<title>Sukey.io: Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.js"></script> 
+  <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+  <script type="text/javascript" src="js/ticker-1.2.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTickerRSS();
+    });
+  </script>
+  <title>Sukey.io: Home</title>
 </head>
 <body>
-<div class="container twitter"> 
-
-    <div class="logo"><a href="#" id="sukey" onclick="location.href='http://sukey.org/io/webapp';">Menu/home</a></div>
+<div class="container twitter">
+    <div class="logo"><a href="#nav" id="sukey" onclick="show('#nav');">Menu/home</a></div>
     <div id="ticker" class="ticker">temp</div>
 </div>
 
-	<ul class="nav">
-    <li><a href="#" onclick="location.href='activate';">Get Started</a></li>
-    <li><a href="#" onclick="location.href='report';">Send us Info</a></li>
-    <li><a href="#" onclick="location.href='http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ';">Send us Info (fullscreen)</a></li>
-    <li><a href="#" onclick="location.href='map';">LIVE! Map</a></li>
-    <li><a href="#" onclick="location.href='about';">About</a></li>
-    <li><a href="#" onclick="location.href='feedback';">Feedback</a></li>    
+<ul class="nav" id="nav">
+  <li><a href="#activate" onclick="show('#activate');">Get Started</a></li>
+  <li><a href="#report" onclick="show('#report');">Send us Info</a></li>
+  <li><a href="#" onclick="location.href='http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ';">Send us Info (fullscreen)</a></li>
+  <li><a href="#map-page" onclick="show('#map-page');">LIVE! Map</a></li>
+  <li><a href="#about" onclick="show('#about');">About</a></li>
+  <li><a href="#feedback" onclick="show('#feedback');">Feedback</a></li>
+</ul>
+
+<div id="activate" class="container">
+  <!-- !!! --><div class="alert">I think some of the wording here needs changing. [pbz1912]</div>
+  <p>Please note down this unique 5 digit id:</p>
+  <div class="well">
+    <!--#include virtual="activate/id.cgi"-->
+  </div>
+  <p>Then enter it here in the "123 Go To" tab:</p>
+  <div>
+  <a href="#report" class="btn" onclick="show('#report');">Send us Info</a>
+  </div>
+  <p>A list of ways to send us info should then appear in the "New" tab.</p>
+  <div>
+  <a href="#feedback" class="btn" onclick="show('#feedback');">Not Working? Feedback.</a>
+  </div>
+</div>
+
+<div id="report" class="container">
+  <iframe src="http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ" width="100%" height="400px"></iframe>
+</div>
+
+<div id="map-page" class="container">
+  <div id="map"></div>
+</div>
+
+<div id="about" class="container">
+  <p>Sukey.io was brought to you by:</p>
+  <ul>
+    <li>Samuel Carlisle <a href="https://twitter.com/samthetechie" target="_blank">(samthetechie)</a></li>
+    <li>Crypt</li>
+    <li>Alan Ross</li>
+    <li>Lilybet</li>
   </ul>
-	<footer>
-		<p><a href="https://twitter.com/sukeyio" target="_blank">@sukeyio</a> | <a href="webapp" target="_blank">Sukey.io</a> | <a href="http://sukey.org/" target="_blank">Sukey</a> &#169;&#824; 2012</p>
-	</footer>
+  <p>We had fun making it so we hope you have fun using it.</p>
+</div>
+
+<div id="feedback" class="container">
+  <p>If anything is not working (highly likely during BETA) then please email: <a href="mailto:sukey.org+feedback@gmail.com">sukey.org+feedback@gmail.com</a><p>
+  <p>Please let us know what type of phone you are using and, if possible the operating system version number.</p>
+</div>
+
+<footer>
+  <p><a href="https://twitter.com/sukeyio" target="_blank">@sukeyio</a> | <a href="webapp" target="_blank">Sukey.io</a> | <a href="http://sukey.org/" target="_blank">Sukey</a> &#169; 2012</p>
+</footer>
+
+<script type="text/javascript" src="js/page-turner.js"></script>
+<script type="text/javascript" src="js/map.js"></script><!-- TODO: Don't want this to load till #map-page is shown. -->
 </body>
 </html>
