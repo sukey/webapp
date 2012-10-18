@@ -17,6 +17,7 @@ __email__ = "samuelcarlisle@gmail.com"
 
 __status__ = "Prototype"
 
+<<<<<<< HEAD
 <pre>
                                                        ____
            ___                                      .-~. /_"-._        ________________________________
@@ -40,6 +41,32 @@ __status__ = "Prototype"
                                   )  \
                                  /,`--'~\--'
 </pre>
+=======
+```
+                                                   ____
+       ___                                      .-~. /_"-._        ________________________________
+      `-._~-.                                  / /_ "~o\  :Y      /We made Sukey.io so that people \
+          \  \                                / : \~x.  ` ')      |can have fun during the protests|
+           ]  Y                              /  |  Y< ~-.__j      |and, on the way, keep each other|
+          /   !                        _.--~T : l  l<  /.-~      < safe, mobile and informed (;..;)|
+         /   /                 ____.--~ .   ` l /~\ \<|Y          \________________________________/
+        /   /             .-~~"        /| .    ',-~\ \L|
+       /   /             /     .^   \ Y~Y \.^>/l_   "--'
+      /   Y           .-"(  .  l__  j_j l_/ /~_.-~    .
+     Y    l          /    \  )    ~~~." / `/"~ / \.__/l_
+     |     \     _.-"      ~-{__     l  :  l._Z~-.___.--~
+     |      ~---~           /   ~~"---\_  ' __[>
+     l  .                _.^   ___     _>-y~
+      \  \     .      .-~   .-~   ~>--"  /
+       \  ~---"            /     ./  _.-'
+        "-.,_____.,_  _.--~\     _.-~
+                    ~~     (   _}  
+                            `. ~(
+                              )  \
+                             /,`--'~\--'
+
+```
+>>>>>>> Dinofix
 This README.md file is part of Sukey.io.
 
 Howto Sukey Community
