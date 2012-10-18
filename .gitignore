@@ -1,4 +1,20 @@
-README.md~
+# Can ignore specific files
+.DS_Store
+
+# Use wildcards as well
+*~
+*.swp
+
+# Can also ignore all directories and files in a directory.
+tmp/**/* 
+
+#specific files which keep coming up... why doesn't *~ work!?
+.gitignore~
+frontend/feedback/index.html~
+frontend/activate/index.shtml~
+frontend/about/index.html~
+frontend/report/index.html~
+
 my_humanio_auth.py
 my_humanio_auth.pyc
 *.py[co]
