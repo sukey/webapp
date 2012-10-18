@@ -47,37 +47,37 @@ This README.md file is part of Sukey.io.
 
 Howto Sukey Community
 =====================
-*Follow us on twitter @sukeyio say hey with #sukey
+* Follow us on twitter @sukeyio say hey with #sukey
 
-*Say hi over at sukey.org@gmail.com so we know you are interested in developing Sukey and then we can say hi back.
+* Say hi over at sukey.org@gmail.com so we know you are interested in developing Sukey and then we can say hi back.
 
-*Join us on #sukey on irc.freenode.net and lurk with us. :)
+* Join us on #sukey on irc.freenode.net and lurk with us. :)
 
-*Submit pull requests on Github and add new python scripts and ideas: https://github.com/sukey/webapp
+* Submit pull requests on Github and add new python scripts and ideas: https://github.com/sukey/webapp
 
-*Submit issues on the issue tracker: https://github.com/sukey/webapp/issues
+* Submit issues on the issue tracker: https://github.com/sukey/webapp/issues
 
 Howto Frontend
 ==============
-*Install XMPP or Apache or ...
+* Install XMPP or Apache or ...
 
-*Symlink or copy the 'Frontend' folder over to the Apache web directory for Testing in the browser on http://127.0.0.1/Frontend (linux /var/www) or (windows /www/htdocs)
+* Symlink or copy the 'Frontend' folder over to the Apache web directory for Testing in the browser on http://127.0.0.1/Frontend (linux /var/www) or (windows /www/htdocs)
 
 Howto Backend
 =============
-*Install Python 2.7.3
+* Install Python 2.7.3
 
-*Signup as a developer over at http://human.io/
+* Signup as a developer over at http://human.io/
 
-*Do their HelloWorld Tutorial: http://human.io/docs/tutorial1
+* Do their HelloWorld Tutorial: http://human.io/docs/tutorial1
 
-*Download their python SDK: http://human.io/static/humanio-python-api.tgz
+* Download their python SDK: http://human.io/static/humanio-python-api.tgz
 
-*Download and play with some of their other examples: https://groups.google.com/forum/#!topic/humanio-discuss/FWHzvWTUuus
+* Download and play with some of their other examples: https://groups.google.com/forum/#!topic/humanio-discuss/FWHzvWTUuus
 
-*You can get in touch with the human.io developers here: https://groups.google.com/forum/?fromgroups#!forum/humanio-discuss
+* You can get in touch with the human.io developers here: https://groups.google.com/forum/?fromgroups#!forum/humanio-discuss
 
-*Run Sukey backend scripts. e.g. python shameonyou.py (I often use a screen session in linux terminal to minimse the number of open terminal windows)
+* Run Sukey backend scripts. e.g. python shameonyou.py (I often use a screen session in linux terminal to minimse the number of open terminal windows)
 
 
 Description
@@ -86,7 +86,7 @@ Sukey.io is a frontend webapp designed for mobile phones (mainly tested with a G
 
 How people can help from other countries
 ========================================
-*Non-Lingual Micro-Tasks (participant's lingua franca different from country where protest is taking place).
+* Non-Lingual Micro-Tasks (participant's lingua franca different from country where protest is taking place).
 
 Introduction / Theory
 =====================
