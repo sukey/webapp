@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" charset="utf-8">
+  
+	<title>Sukey.io: Home</title>
+</head>
+<body>
+<div class="container twitter"> 
+
+    <div class="logo"><a href="#" id="sukey" onclick="location.hash='#nav';show('#nav');">Menu/home</a></div>
+    <div id="ticker" class="ticker">temp</div>
+</div>
+
+<div id="nav">
+	<ul class="nav">
+    <li><a href="#" onclick="location.hash='#activate';show('#activate');">Get Started</a></li>
+    <li><a href="#" onclick="location.hash='#report';show('#report');">Send us Info</a></li>
+    <li><a href="#" onclick="location.href='http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ';">Send us Info (fullscreen)</a></li>
+    <li><a href="#" onclick="location.hash='#map';show('#map');">LIVE! Map</a></li>
+    <li><a href="#" onclick="location.hash='#about';show('#about');">About</a></li>
+    <li><a href="#" onclick="location.hash='#feedback';show('#feedback');">Feedback</a></li>    
+  </ul>
+</div>
+
+<div id="activate">
+	activate stuff here
+</div>
+
+<div id="report">
+	report stuff here
+</div>
+
+<div id="map">
+	map here
+</div>
+
+<div id="about">
+	about here
+</div>
+
+<div id="feedback">
+	feedback here
+</div>
+
+
+
+	<footer>
+		<p><a href="https://twitter.com/sukeyio" target="_blank">@sukeyio</a> | <a href="webapp" target="_blank">Sukey.io</a> | <a href="http://sukey.org/" target="_blank">Sukey</a> &#169;&#824; 2012</p>
+	</footer>
+  
+<script>
+  function show(id) {
+    document.getElementById('nav').style.display = 'none';
+    document.getElementById('activate').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('feedback').style.display = 'none';
+    
+    document.getElementById(id.substr(1)).style.display = 'block';
+  }
+  if (location.hash === ''){
+    show('#nav');
+  } else {
+    show(location.hash);
+  }
+</script>
+</body>
+</html>
