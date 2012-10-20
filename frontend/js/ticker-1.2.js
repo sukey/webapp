@@ -125,8 +125,16 @@ function switchStatus(list, num){
 function ticker(list){
 	setInterval(function(){
     fade('ticker');
-    setTimeout(function(){document.getElementById("ticker").innerHTML=
-    list.getElementsByTagName("tickertext")[msgIteration].childNodes[0].nodeValue}, TimeToFade);
+    setTimeout(function(){
+      
+      var timestamp = list.getElementsByTagName("published")[msgIteration].childNodes[0].nodeValue;
+      var date = new Date(timestamp*1000);
+      
+      document.getElementById("ticker").innerHTML=
+      list.getElementsByTagName("tickertext")[msgIteration].childNodes[0].nodeValue
+      + "<br/><br/>"
+      + date.getDate() + ", " + date.getMonth() + ", " + date.getUTCFullYear()
+    }, TimeToFade);
     setTimeout(function(){fade('ticker')}, TimeToFade);
     if(msgIteration >= list.getElementsByTagName("tickertext").length - 1){
       msgIteration = 0
