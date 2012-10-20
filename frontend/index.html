@@ -8,19 +8,16 @@
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.js"></script> 
-  <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
   <script type="text/javascript" src="js/ticker-1.2.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-      getTickerRSS();
-    });
+    document.addEventListener('DOMContentLoaded',function(){getTickerRSS();});
   </script>
   <title>Sukey.io: Home</title>
 </head>
 <body>
 <div class="container twitter">
     <div class="logo"><a href="#nav" id="sukey" onclick="show('#nav');">Menu/home</a></div>
-    <div id="ticker" class="ticker">temp</div>
+    <div id="ticker" class="ticker">Loading...</div>
 </div>
 
 <ul class="nav" id="nav">
