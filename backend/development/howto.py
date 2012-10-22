@@ -61,7 +61,7 @@ def main():
     print shortcode
     app.create_task(description="How to Sukey.io?",
                     humans_per_item=-1, #humans_per_item - How many people you are requesting. Specify -1 for unlimited number
-                    thumbnail="http://sukey.io/images/how-to.gif",
+                    thumbnail="http://sukey.io/webapp/images/how-to.gif",
                     human_can_do_multiple=True,
                     #auto_repeat=None,
                     #camera=True, #you need a camera for this activity! Disable for testing
@@ -75,7 +75,7 @@ def on_connect(session, task, item):
 
     print "Human connected, explaing what sukey.io is..."
     #session.add_link("https://www.youtube.com/v/DSltSvVeYHY", text='Sukey.io Tutorial')
-    session.add_image("http://sukey.org/images/app/loadsukey.gif", decorated=False)
+    session.add_image("http://sukey.io/webapp/images/loadsukey.gif", decorated=False)
     #could this be a mini animated gif image showing the UI working?!
     session.add_text("Step 1: Herp")
     session.add_text("Step 2: Derp")

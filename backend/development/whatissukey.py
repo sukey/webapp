@@ -50,10 +50,10 @@ def main():
     app = humanio.App(my_humanio_auth.developer_id,
                       my_humanio_auth.secret_key,
                       public=False)
-    print "Connecting to the 1984 darknet listening posts...viva la resistance!"
+    print "Starting What is Sukey?"
     app.create_task(description="What is Sukey.io?",
                     humans_per_item=-1, #humans_per_item - How many people you are requesting. Specify -1 for unlimited number
-                    thumbnail="http://sukey.io/images/info.gif",
+                    thumbnail="http://sukey.io/webapp/images/info.gif",
                     human_can_do_multiple=True,
                     #auto_repeat=None,
                     #camera=True, #you need a camera for this activity! Disable for testing
@@ -66,7 +66,7 @@ def on_connect(session, task, item):
     """This is called when the human clicks on our task in his client app."""
 
     print "Human connected, explaing what sukey.io is..."
-    session.add_image("http://sukey.org/images/app/loadsukey.gif", decorated=False)
+    session.add_image("http://sukey.io/webapp/images/loadsukey.gif", decorated=False)
     session.add_text("Sukey.io helps you have fun during the protests and, on the way, keep each other safe, mobile and informed.")
     session.add_text("This leaves no trace, the micro-app list is temporary and set by Sukey servers.")
     session.add_text("No installation or removal is required and they can be used immediately.")

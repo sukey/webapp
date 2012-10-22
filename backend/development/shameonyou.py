@@ -56,7 +56,7 @@ def main():
     print "Connecting to the 1984 darknet listening posts...viva la resistance!"
     app.create_task(description="Shame on You!",
                     humans_per_item=-1, #humans_per_item - How many people you are requesting. Specify -1 for unlimited number
-                    thumbnail="http://sukey.io/images/photo.gif",
+                    thumbnail="http://sukey.io/webapp/images/photo.gif",
                     human_can_do_multiple=True,
                     #auto_repeat=None,
                     #camera=True, #you need a camera for this activity! Disable for testing
@@ -71,7 +71,7 @@ def main():
 
 def on_connect(session, task, item): 
     #session.add_image(image_array[random.randint(1, len(image_array)-1)], decorated=False)
-    session.add_image("http://sukey.org/images/app/sayit.png", decorated=False)
+    session.add_image("http://sukey.io/webapp/images/app/sayit.png", decorated=False)
     session.add_text("Photograph acts of police brutality...Protip: Try to get badge numbers and faces.", boxed=True)
     session.add_camera_button("image")
     session.add_submit_button("Upload")
@@ -85,7 +85,7 @@ def on_submit(session, task, form_data):
         session.clear_screen()
         session.add_text(thanks_array[random.randint(0, len(thanks_array)-1)])
 	#session.add_image(thanks_image_array[random.randint(0, len(thanks_image_array)-1)])
-	session.add_image("http://sukey.org/images/app/milkshake.png")
+	session.add_image("http://sukey.io/webapp/images/app/milkshake.png")
         session.dismiss(approve=True, delay_seconds=4, new_task_hashed_id=None)
     else:
         # Didn't submit a photo. Do not approve the work.

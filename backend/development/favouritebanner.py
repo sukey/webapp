@@ -53,10 +53,10 @@ def main():
     app = humanio.App(my_humanio_auth.developer_id,
                       my_humanio_auth.secret_key,
                       public=False)
-    print "Connecting to the 1984 darknet listening posts...viva la resistance!"
+    print "Favourite Banner"
     app.create_task(description="Favourite Protest Sign", #rename to epic signage?
                     humans_per_item=-1, #humans_per_item - How many people you are requesting. Specify -1 for unlimited number
-                    thumbnail="http://sukey.org/images/logo.png",
+                    thumbnail="http://sukey.io/webapp/images/logo.png",
                     human_can_do_multiple=True,
                     #auto_repeat=None,
                     #camera=True, #you need a camera for this activity! Disable for testing
@@ -70,7 +70,7 @@ def main():
 def on_connect(session, task, item):
     #session.add_title("Watch them watch us.")   
     #session.add_text(thanks_array[random.randint(1, len(thanks_array)-1)]) 
-    session.add_image("http://sukey.io/images/watching.png") #randomise this
+    session.add_image("http://sukey.io/webapp/images/watching.png") #randomise this
     session.add_text("Snap a pic your favourite banner or placard")
     session.add_camera_button("image")
     session.add_submit_button()
@@ -83,7 +83,7 @@ def on_submit(session, task, form_data):
         print "\"%s\"" % form_data["image"]
         session.clear_screen()
         session.add_title(thanks_array[random.randint(1, len(thanks_array)-1)])
-	session.add_image("http://sukey.org/images/milkshake.png") #randomise this
+	session.add_image("http://sukey.io/webapp/images/milkshake.png") #randomise this
         session.add_text("Please remember: if you suspect it, please report it to your nearest people's movement.")
         session.dismiss(approve=True, delay_seconds=4, new_task_hashed_id=None)
 	#new_task_hashed_id - The task_hashed_id for another task, as returned when that task was created. Specify this to send human to a new task after they're dismissed.
