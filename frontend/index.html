@@ -7,9 +7,9 @@
 
   <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
 
-  <script src="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.js"></script> 
+  <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
   <script type="text/javascript" src="js/ticker-1.2.js"></script>
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded',function(){getTickerRSS();});
@@ -28,17 +28,17 @@
 	<nav id="main">
 	<ul>
 <!-- 	Will be using jquery data on li click to navigate -->
-		<li data-target="started" class="click">Get Started</li>
-		<li data-target="send" class="click">Send us Info</li>
-		<li data-target="map" class="click">LIVE! Map</li>
-		<li data-target="about" class="click">About</li>
-		<li data-target="feedback" class="click">Feedback</li>
+		<li data-target="intro-view" class="click">Get Started</li>
+		<li data-target="send-view" class="click">Send us Info</li>
+		<li data-target="map-view" class="click">LIVE! Map</li>
+		<li data-target="feedback-view" class="click">Feedback</li>
+		<li data-target="about-view" class="click">About</li>
 	</ul>
 	</nav>
 
 
 
-<section id="activate">
+<section id="intro-view" class="view">
 	<div class="copy">
   <!-- !!! --><div class="alert">I think some of the wording here needs changing. [pbz1912]</div>
   <p>Please note down this unique 5 digit id:</p>
@@ -56,15 +56,15 @@
 	</div>
 </section>
 
-<section id="report"  >
+<section id="send-view" class="view">
   <iframe src="http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ" width="100%" height="400px"></iframe>
 </section>
 
-<section id="map-page">
+<section id="map-view" class="view">
   <div id="map"></div>
 </section>
 
-<section id="about">
+<section id="about-view" class="view">
 	<div class="copy">
 
   <p>Sukey.io was brought to you by:</p>
@@ -79,10 +79,16 @@
 	</div>
 </section>
 
-<section id="feedback">
+<section id="feedback-view" class="view">
 	<div class="copy">
-  <p>If anything is not working (highly likely during BETA) then please email: <a href="mailto:sukey.org+feedback@gmail.com">sukey.org+feedback@gmail.com</a></p>
-  <p>Please let us know what type of phone you are using and, if possible the operating system version number.</p>
+  <p>If anything is not working (highly likely during BETA) then please describe the problem:</p>
+  	<form action="mailto:sukey.org+feedback@gmail.com" method="post" enctype="text/plain">
+Feedback:<br>
+<textarea type="textarea" name="feeback" value="" cols=40 rows=4></textarea><br>
+<input id="useragent" type="text" name="browserversion" value="os/browser to be detected" disabled="disabled" size="50"><br>
+<input type="submit" id="submit" value="Send">
+	</form>
+	<p>Or you can email us: <a href="mailto:sukey.org+feedback@gmail.com">sukey.org+feedback@gmail.com</a></p>
   	</div>
 </section>
 
@@ -98,8 +104,6 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/page-turner.js"></script>
-<script type="text/javascript" src="js/map.js"></script><!-- TODO: Don't want this to load till #map-page is shown. -->
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

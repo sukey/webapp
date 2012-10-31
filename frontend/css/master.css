@@ -50,7 +50,6 @@ img {
 }
 
 section {
-/* 	display: none; */
 
 	padding: 5px;
 	margin-bottom: 5px;
@@ -58,6 +57,10 @@ section {
 	color: black;
 
 	-webkit-border-radius: 5px;
+}
+
+section.view {
+	display: none;
 }
 
 footer {
@@ -75,7 +78,7 @@ footer {
 	font-size: 18px;
 	line-height: 24px;
 	
-	width: 70%;
+	width: 85%;
 	max-width: 450px;
 	margin: 0 auto;
 	padding-top: 20px;
@@ -148,11 +151,22 @@ nav#main ul li:hover {
 
 #map {
 	width: 100%;
-	height: 100%;
+	min-height: 400px;
 }
 
+/* ***********FEEDBACK FORM */
 
+input[type='text'], textarea {
+	width: 96%;
+	padding: 2%;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
 
+input#submit {
+	width: 100%;
+	margin-bottom: 15px;
+}
 
 
 
