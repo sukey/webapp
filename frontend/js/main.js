@@ -91,7 +91,6 @@ function initmap() {
 			map.addLayer(polygon);
 		}
 	});
-	
 }
 
 $(document).ready(function() {
