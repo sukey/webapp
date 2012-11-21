@@ -1,35 +1,101 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<meta http-equiv="content-script-type" content="text/javascript">
-	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" charset="utf-8">
-	<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
-	<script type="text/javascript" src="js/ticker-1.2.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			getTickerRSS();
-		});
-	</script>
-	<title>Sukey.io: Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="content-script-type" content="text/javascript">
+
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+
+  <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+  <script type="text/javascript" src="js/ticker-1.2.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function(){getTickerRSS();});
+  </script>
+
+  <title>Sukey.io: Home</title>
 </head>
 <body>
-	<div id="container">
-		<div id="ticker"></div>
-	</div>
-	<div id="sukey" onclick="location.href='http://sukey.org/io/';"></div>
-	<ul class="nav">
-    <li><a href="#" onclick="location.href='activate';">Get Started</a></li>
-    <li><a href="#" onclick="location.href='report';">Send us Info</a></li>
-    <li><a href="#" onclick="location.href='http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ';">Send us Info (fullscreen)</a></li>
-    <li><a href="#" onclick="location.href='map';">LIVE! Map</a></li>
-    <li><a href="#" onclick="location.href='about';">About</a></li>
-    <li><a href="#" onclick="location.href='feedback';">Feedback</a></li>    
+<div id="container">
+
+	<header>
+		<div id="ticker" class="pad5">The Sukey online tactical support team is online and standying by for reports.<br>
+Have a great #demo2012! Stay safe people! (;..;)  #solidarity</div>
+		<nav id="sukey" class="click"><img src="images/logo1.png" alt="home"></nav>
+	</header>
+
+	<nav id="main">
+	<ul>
+<!-- 	Will be using jquery data on li click to navigate -->
+		<li data-target="intro-view" class="click">Get Started</li>
+		<!--<li data-target="send-view" class="click">Send us Info</li>-->
+		<li data-target="map-view" class="click">LIVE! Map</li>
+		<li data-target="feedback-view" class="click">Feedback</li>
+		<li data-target="about-view" class="click">About</li>
+	</ul>
+	</nav>
+
+<section id="intro-view" class="view">
+<p>People at a demonstration can tag tweets with <a href="https://twitter.com/search?q=%23sukey&amp;src=typd">#sukey</a>, or visit <a href="http://www.sukey.io/">http://www.sukey.io/</a> to anonymously send photo and text reports.</p>
+<p>Verified information is then digested, structured, and fed back to demonstrators. </p>
+<br>
+<p>No smartphone? No problem! Text 'follow sukeysms' to 86444 to receive updates via SMS. Signup costs 10p and following texts are free. Please help others around you to get Sukey updates by showing them this!</p>
+</section>
+
+<section id="send-view" class="view">
+  <iframe src="http://api.human.io/client.html?phonegap=0&developer_id=YrpztFF5TLOAe4icukn8pQ" width="100%" height="400px"></iframe>
+</section>
+
+<section id="map-view" class="view">
+	  <nav id="map-up"><a href="#">&#9650;</a></nav>
+	  <div id="map"></div>
+</section>
+
+<section id="about-view" class="view">
+<p>Sukey is a platform designed to keep people safe, mobile, and informed during demonstrations. We <a href="https://en.wikipedia.org/wiki/Crowdsourcing">crowdsource</a> and verify information from Twitter and other online and offline sources to provide demonstrators with a timely overview of what is happening on the ground.</p>
+	<div class="copy">
+  <p>Sukey was brought to you by:</p>
+  <ul>
+    <li>-Samuel Carlisle <a href="https://twitter.com/samthetechie" target="_blank">(samthetechie)</a></li>
+    <li>-Elizabeth Richardson</li>
+    <li>-<a href="http://facilitatingchange.org/author/christine/" target ="_blank">Christine Prefontaine</a></li>
+    <li>-Crypt</li>
+    <li>-Alan Ross</li>
+    <li>-Dozens of volunteers and supporters all around the world</li>
   </ul>
-	<footer>
-		<p><a href="https://twitter.com/sukeyio" target="_blank">@sukeyio</a> | <a href="http://sukey.io/webapp/" target="_blank">Sukey.io</a> | <a href="http://sukey.org/" target="_blank">Sukey</a> &#169; 2012</p>
-	</footer>
+  <br>  
+  <p>We had fun making it so we hope you have fun using it.</p>
+
+	</div>
+</section>
+
+<section id="feedback-view" class="view">
+	<div class="copy">
+  <p>If anything is not working then please shoot us an email.</p>
+  	<form action="mailto:sukey.org+feedback@gmail.com" method="post" enctype="text/plain">
+Feedback:<br>
+<textarea type="textarea" name="feeback" value="" cols=40 rows=4></textarea><br>
+<input id="useragent" type="text" name="browserversion" value="os/browser to be detected" disabled="disabled" size="50"><br>
+<input type="submit" id="submit" value="Send">
+	</form>
+	<p>Or you can email us: <a href="mailto:sukey.org+feedback@gmail.com">sukey.org+feedback@gmail.com</a></p>
+  	</div>
+</section>
+
+<footer>
+  <p><a href="https://twitter.com/sukeyio" target="_blank">@sukeyio</a> | <a href="http://www.sukey.io/webapp" target="_blank">Sukey.io</a> | <a href="http://sukey.org/" target="_blank">Sukey</a> &#169; 2012</p>
+</footer>
+
+
+
+
+
+
+</div>
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
