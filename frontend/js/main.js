@@ -40,45 +40,74 @@ function initmap() {
 			map.openPopup(popup);
 		},
 		locationfound: function(e) {
-			var radius = e.accuracy / 2;
-			//var circle = new L.Circle(e.latlng, radius);
-			//map.addLayer(circle);
-			//latlng type http://leaflet.cloudmade.com/reference.html#latlngs
-			
-			var latlng = new L.LatLng(51.53024, -0.07400);
-			var latlngs = new Array();
-			
-		latlngs[0] = e.latlng; //LatLng(51.53024, -0.07634) (when testing from London Hackspace quiet room) :p
-		latlngs[1] = latlng; //LatLng(51.53024, -0.07400);
 
-		// create a red polyline from an arrays of LatLng points
+		var radius = e.accuracy / 2;
 
-		var polyline = new L.Polyline(latlngs, {
-			color: 'red'
-		});
-	
-		// zoom the map to the polyline
-		map.fitBounds(new L.LatLngBounds(latlngs));
-		var marker = new L.Marker(latlngs[0]);
-		var marker2 = new L.Marker(latlngs[1]);
-	
-		// add the polyline to the map
-		map.addLayer(polyline);
+		var marker = new L.Marker(e.latlng);
 		map.addLayer(marker);
-		map.addLayer(marker2);
+
+			var circle = new L.Circle(e.latlng, radius);
+			map.addLayer(circle);
+
+	var WifiIcon = L.Icon.extend({
+			iconUrl: 'wifi.png',
+			shadowUrl: null,
+			iconSize: new L.Point(32, 37),
+			shadowSize: null,
+			iconAnchor: new L.Point(14, 37),
+			popupAnchor: new L.Point(2, -32)
+		});
+
+		var geojsonLayer = new L.GeoJSON(null, {
+		    pointToLayer: function (latlng){
+		        return new L.CircleMarker(latlng, {
+		            radius: 8,
+		            fillColor: "#ff7800",
+		            color: "#000",
+		            weight: 1,
+		            opacity: 1,
+		            fillOpacity: 0.8
+		        });
+		    }
+		});
+
+		var wifiJSON = new L.GeoJSON(fsWifi, {
+		    pointToLayer: function (latlng){
+		        return new L.Marker(latlng, {
+		            icon: new WifiIcon()
+		        });
+		    }
+		});
+
+		geojsonLayer.on("featureparse", function (e) {
+		    var popupContent = "";
+		    if (e.geometryType == "Point") {
+		        popupContent += "<p></p>";
+		    }
+		    if (e.properties && e.properties.popupContent) {
+		        popupContent += e.properties.popupContent;
+		    }
+		    e.layer.bindPopup(popupContent);
+		    if (e.properties && e.properties.style && e.layer.setStyle) {
+		        e.layer.setStyle(e.properties.style);
+		    }
+		});
+
+		wifiJSON.on("featureparse", function (e) {
+		    var popupContent = "<p></p>";
+		    popupContent += "<p></p>";
+		    if (e.properties && e.properties.popupContent) {
+		        popupContent += e.properties.popupContent;
+		    }
+		    e.layer.bindPopup(popupContent);
+		});
+
+
+		map.addLayer(wifiJSON);
+
+		wifiJSON.addGeoJSON(fsWifi);
+		wifiJSON.addGeoJSON(converted_json);
 	
-		marker.bindPopup("The value of latlngs[0] is " + latlngs[0]).openPopup();
-		marker2.bindPopup("The value of latlngs[0] is " + latlngs[1]).openPopup();
-	
-		var p1 = latlngs[0],
-			p2 = latlngs[1],
-			p3 = new L.LatLng(51.528, -0.07400),
-			p4 = new L.LatLng(51.528, -0.07634),
-			polygonPoints = [p1, p2, p3, p4],
-	
-			polygon = new L.Polygon(polygonPoints);
-			polygon.bindPopup("Herp, Derp, I am a Square.");
-			map.addLayer(polygon);
 		}
 	});
 }
